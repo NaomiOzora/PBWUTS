@@ -1,0 +1,268 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0; /* Hapus margin auto dan padding */
+    padding: 0;
+}
+
+.welcome{
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-left {
+    position: sticky;
+    top: 20px;
+    will-change: transform;
+    backface-visibility: hidden;
+    align-self: flex-start;
+    text-align: center;
+    box-shadow: none;
+    transition: none;
+  }
+
+
+.profile-right {
+    flex: 2;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.profile-title {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #2c3e50;
+    border-bottom: 2px solid #2D336B;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
+    
+    .profile-left {
+        position: static;
+        margin-bottom: 30px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+.social-icon {
+    width: 28px; /* Sesuaikan ukuran */
+    height: 28px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a {
+    color: #2c3e50;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+.social-icons a:hover {
+    color: #3498db;
+  }
+
+/* Header dan Navigasi */
+header {
+    background: #2D336B;
+    color: #FFF2F2;
+    padding: 5px 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    float: left;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFF2F2;   text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #A9B5DF;
+    color: #fff2f2; /* Warna saat hover */
+}
+
+
+.content-section {
+    display: none; /* Sembunyikan semua section awal */
+    padding: 20px;
+}
+.active {
+    display: block; /* Tampilkan section aktif */
+}
+
+/* Konten Utama */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 75px;
+    padding-top: 25px;
+    background: #FFF2F2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2D336B;
+}
+
+.profile-pic {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    display: block;
+    margin: 20px auto;
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-section ul {
+    text-align: left; 
+    padding-left: 20px; 
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-section ul {
+    text-align: left; 
+    padding-left: 20px; 
+}
+
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2D336B;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+  .download-btn:hover {
+    background-color: #A9B5DF;
+}
+
+.programming{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background: #2D336B;
+    color: #FFF2F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #A9B5DF;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #2D336B;
+    color: #FFF2F2;   
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
